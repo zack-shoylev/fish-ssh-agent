@@ -7,6 +7,6 @@ function __ssh_agent_is_started -d "check if ssh agent is already started"
 		return 1
 	end
 
-	ps -ef | grep $SSH_AGENT_PID | grep -v grep | grep -q ssh-agent
+	ps -ef | grep $SSH_AGENT_PID | grep -v grep | grep -q trezor-agent
 	return $status
 end
